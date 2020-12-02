@@ -1,9 +1,16 @@
 ---
-
-- hosts: all
-  gather_facts: false
+- hosts: 54.221.22.143
+  sudo: yes
   tasks:
-    - ping:
-      delegate_to: 54.221.22.143
-      vars:
-         ansible_connection: ssh
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
+
+    - name: enabled mod_rewrite
+      apache2_module: name=rewrite state=present
+      notify:
+        - restart apache2
+
+  handlers:
+    - name: restart apache2
+      service: name=apache2 state=restarted
+
