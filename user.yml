@@ -2,14 +2,25 @@
  - hosts: 54.221.22.143
    user: root
    tasks:
+    - name: installing httpd
+      action: yum name=httpd state=installed
+    - name: start httpd
+      service:
+       name: httpd
+       state: restarted
+   tasks:
+    - name: installing nfs
+      action: yum name=nfs* state=installed
+    - name: start nfs
+      service:
+       name: nfs
+       state: restarted
+   tasks:
      - name: Add user
        user: name=delhi2
-             groups=hadoopgroup,dbgroup
 
      - name: Add user
        user: name=ram
-             groups=dbgroup
 
      - name: Add user
        user: name=shyam
-             groups=hadoopgroup
