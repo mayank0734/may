@@ -24,7 +24,7 @@
 
      - name: Add user
        user: name=shyam
-    tasks:
+   tasks:
      - name: Add user
        user: name=delhi2
              groups=hadoopgroup,dbgroup
