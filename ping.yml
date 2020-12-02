@@ -1,5 +1,5 @@
 ---
-- hosts: 54.221.22.143
+- hosts: linux
   sudo: yes
   tasks:
     - name: install apache2
