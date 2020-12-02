@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  gather_facts: false
+  tasks:
+    - ping:
+      delegate_to: 54.221.22.143
+      vars:
+         ansible_connection: ssh
