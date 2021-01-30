@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 public partial class record : System.Web.UI.Page
 {
 
-    SqlConnection con = new SqlConnection(@"Data Source=rm-6gjt0i37hchv8r98ono.mssql.ap-south-1.rds.aliyuncs.com,3433;Initial Catalog=mydb;User ID=testuser;Password=Testuser1234");
+    SqlConnection con = new SqlConnection(@"Data Source=40.78.144.130,1433;Initial Catalog=myapp;User ID=mayank;Password=Mayank@123456");
     protected void Page_Load(object sender, EventArgs e)
     {
         con.Open();
