@@ -47,7 +47,7 @@
 
             <table class="myTable">      
                  <tr>
-                    <td>Student ID-1</td>
+                    <td>Student ID</td>
                 </tr>
                 <tr>
                     <td>
